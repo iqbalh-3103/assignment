@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>My Personal Website — CGPA Calculator</title>
+<link rel="stylesheet" href="style.css" />
+
+<!-- Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yHfQv6Lz9DzB2y4eE9z1W8fwlxJjT+hHs9LJ+K8B2HbZzsmu+uFZw9J7y6PpRJmMZlYQH0mY2j5jvI0yQUg2yg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="site-title">Muhammad Iqbal</h1>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <img src="images/profile.jpg" alt="Muhammad Iqbal" class="profile-pic" />
+    </div>
+    <div class="hero-right">
+      <h2>Introduction</h2>
+      <p>"Hi there! I’m Muhammad Iqbal, a passionate web developer-in-training who loves transforming ideas into interactive and visually engaging websites. With hands-on experience in HTML, CSS, and JavaScript, I enjoy creating projects that not only function seamlessly but also look great. This website is my personal showcase — highlighting my skills, education, and projects — including a dynamic CGPA calculator that demonstrates my ability to combine coding logic with user-friendly design. I’m constantly exploring new technologies, learning best practices, and challenging myself to build creative solutions that make a real impact."</p>
+
+      <h3>Quick Info</h3>
+      <ul>
+        <li><strong>Education:</strong>Degree student</li>
+        <li><strong>Skills:</strong> HTML, CSS, JavaScript, Java basics</li>
+        <li><strong>Contact:</strong> iqbal@gmail.com</li>
+      </ul>
+
+      <!-- Social Media Links -->
+      <h3>Connect with me</h3>
+      <div class="social-links">
+  <a href="https://instagram.com/iqblhnff" target="_blank" title="Instagram">
+    <img src="images/instagram.jpg" alt="Instagram" class="social-icon" />
+  </a>
+  <a href="https://wa.me/0193424118" target="_blank" title="WhatsApp">
+    <img src="images/whatsapp.jpg" alt="WhatsApp" class="social-icon" />
+  </a>
+  <a href="https://t.me/PK2iqbal" target="_blank" title="Telegram">
+    <img src="images/telegram.jpg" alt="Telegram" class="social-icon" />
+  </a>
+</div>
+
+
+    </div>
+  </section>
+</main>
+
+<!-- Optional Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Muhammad Iqbal — Responsive Personal Website</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

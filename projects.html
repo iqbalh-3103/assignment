@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Projects — Muhammad Iqbal</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="site-title">Muhammad Iqbal</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Projects</h2>
+
+    <article>
+      <h3>Responsive Personal Website</h3>
+      <p>This site you are viewing is a responsive website with dynamic CGPA calculator, built using HTML, CSS, and JavaScript.</p>
+    </article>
+ <!-- CGPA Calculator -->
+  <section id="calculator" class="card">
+    <h2>CGPA Calculator</h2>
+    <p>Enter your subjects, credit hours, and grades. You can add or remove subjects.</p>
+
+    <form id="cgpa-form" onsubmit="return false;">
+      <table id="subjects-table">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Credits</th>
+            <th>Grade</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="subjects-body">
+          <tr>
+            <td><input type="text" name="subjName" placeholder="e.g. Math" value="Mathematics" /></td>
+            <td><input type="number" name="credits" min="0.5" step="0.5" value="3" required /></td>
+            <td>
+              <select name="grade">
+                <option value="4.0">A (4.00)</option>
+                <option value="3.67">A- (3.67)</option>
+                <option value="3.33">B+ (3.33)</option>
+                <option value="3.0">B (3.00)</option>
+                <option value="2.67">B- (2.67)</option>
+                <option value="2.33">C+ (2.33)</option>
+                <option value="2.0">C (2.00)</option>
+                <option value="1.67">D+ (1.67)</option>
+                <option value="1.0">D (1.00)</option>
+                <option value="0.0">F (0.00)</option>
+              </select>
+            </td>
+            <td><button class="btn small remove-row" type="button">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="form-actions">
+        <button class="btn" id="add-row" type="button">+ Add Subject</button>
+        <button class="btn primary" id="calculate" type="button">Calculate CGPA</button>
+        <button class="btn" id="clear" type="button">Clear</button>
+      </div>
+    </form>
+
+    <div id="result" class="result-card" aria-live="polite" hidden>
+      <p><strong>Total Credits:</strong> <span id="total-credits">0</span></p>
+      <p><strong>CGPA:</strong> <span id="cgpa-value">0.00</span></p>
+      <p><strong>Classification:</strong> <span id="classification">-</span></p>
+    </div>
+
+    <div id="error" class="error" role="alert" hidden></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Muhammad Iqbal — Responsive Personal Website</p>
+  </div>
+</footer>
+
+<script src="calculator.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+    <article>
+      <h3>Other Projects</h3>
+      <ul>
+        <li>Simple Java console programs (arrays, loops)</li>
+        <li>Student assignments: linked list / 2D array exercises</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year3"></span> Muhammad Iqbal</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

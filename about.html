@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>About — Muhammad Iqbal</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="site-title">Muhammad Iqbal</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>About Me</h2>
+<section class="slider-container">
+  <div class="slider-wrapper">
+    <div class="slide"><img src="images/achievement1.jpg" alt="Achievement 1"></div>
+    <div class="slide"><img src="images/achievement2.jpg" alt="Achievement 2"></div>
+    <div class="slide"><img src="images/achievement3.jpg" alt="Achievement 3"></div>
+  </div>
+  <div class="slider-controls">
+    <button class="slider-btn prev"> < </button>
+    <button class="slider-btn next"> > </button>
+  </div>
+</section>
+
+
+    <p>Hi! I’m the second of three siblings, a passionate student of computer science who loves turning ideas into reality. When I’m not exploring coding projects or building interactive websites, you’ll find me on the rugby field, pushing limits, embracing teamwork, and learning resilience. I strive to combine discipline, creativity, and curiosity to craft solutions that not only work seamlessly but also leave a lasting impression.</p>
+
+    <h3>Skills</h3>
+    <ul class="skills-grid">
+      <li>HTML</li>
+      <li>CSS (Responsive)</li>
+      <li>JavaScript (DOM, forms)</li>
+      <li>Java (Basics)</li>
+    </ul>
+
+   <h3>Education & Achievements</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Institution</th>
+      <th>Achievements / CGPA / Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SPM</td>
+      <td>SMK Jalan 3</td>
+      <td>9A, 2B+</td>
+    </tr>
+    <tr>
+      <td>Foundation / Asasi</td>
+      <td>Universiti Pertahanan Nasional Malaysia</td>
+      <td>CGPA: 3.95</td>
+    </tr>
+    <tr>
+      <td>Bachelor’s Degree (Current)</td>
+      <td>Universiti Pertahanan Nasional Malaysia</td>
+      <td>In progress</td>
+    </tr>
+  </tbody>
+</table>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year2"></span> Muhammad Iqbal</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+<script>
+const wrapper = document.querySelector('.slider-wrapper');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.slider-btn.prev');
+const nextBtn = document.querySelector('.slider-btn.next');
+
+let index = 0;
+
+function showSlide(i) {
+  if(i < 0) index = slides.length - 1;
+  else if(i >= slides.length) index = 0;
+  else index = i;
+  wrapper.style.transform = `translateX(-${index * 100}%)`;
+}
+
+prevBtn.addEventListener('click', () => showSlide(index - 1));
+nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+// Optional: auto slide every 5 seconds
+setInterval(() => showSlide(index + 1), 5000);
+</script>
+
+</body>
+</html>
